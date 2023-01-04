@@ -1,0 +1,88 @@
+/* ========== Haut de page ========== */
+
+.top-page-container{ /* Image du conteneur */
+    background-image: url("../images/panier_image01.jpg");
+}
+
+/* ========== Mon panier ========== */
+
+h2{
+    font-family: 'Langar', cursive;
+    font-size: 35px;
+    font-weight: 300;
+    text-align: center;
+}
+
+td>img{ /* Mise en forme des images du panier */
+    width: 260px;
+    height: 260px;
+    margin: 20px 0px 20px 40px;
+    border-radius: 20px;
+}
+
+/* ==== Tableau ==== */
+
+table{
+    width: 100%;
+    background-color: #CBCBCB;
+    border-radius: 20px;
+    font-size: 24px;
+    font-family: 'Inter', cursive;
+    font-weight: bold;
+    padding: 7px;
+    border-collapse: collapse;
+}
+
+td, th{
+    border-right: solid 3px white;;
+}
+
+tr{
+    border: solid 3px white;
+    text-align: center;
+}
+
+.nom-casque-container{
+    width: 272px;
+    margin-right: 75px;
+    font-weight: bold;
+}
+
+.nom-casque, .td-text-total{
+    margin-left: 25px;
+}
+
+.td-text-total{
+    padding: 15px;
+}
+.td-prix, .td-supprimer, .td-prix-total p{
+    width: 200px;
+}
+
+/* ==== Bouton supprimer ==== */
+
+.boutton-supprimer{ /* Style du bouton supprimer*/
+    color: white;
+    background-color: black;
+    padding: 0 30px;
+    border-radius: 20px;
+    font-family: 'Inter', cursive;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.boutton-supprimer:hover{ /* Etat au survol */
+    background-color: rgb(231, 103, 103);
+    color: rgb(0, 0, 0);
+}
+
+.td-text-total{
+    text-align: left;
+    font-weight: bold;
+    padding-left: 7px;
+}
+
+.prix-total{
+    font-style: italic;
+}
+

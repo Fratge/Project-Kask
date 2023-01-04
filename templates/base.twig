@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/raccourcies.css">
+	<link rel="stylesheet" href="css/boutton.css">
+	{% block style %}
+
+	{% endblock style %}
+	<title>{{ titre_page }} | KASK</title>
+
+</head>
+
+<body>
+	<header role="banner">
+		<div class="wrapper">
+			<nav role="navigation" class="header-nav">
+				<a href="index.php" class="header-title">KASK</a>
+				<ul class="header-ul">
+					<li class="header-li"><a href="index.php">Accueil</a></li>
+					<li class="header-li"><a href="nos_casques.php?aff=liste">Nos casques</a></li>
+					<li class="header-li"><a href="contact.php">Contact</a></li>
+					<li class="header-li"><a href="https://twitter.com/home" target="_blank"><img class="images-reseaux"
+								src="images/twitter.png" alt="logo twitter"></a></li>
+					<li class="header-li"><a href="https://fr-fr.facebook.com/" target="_blank"><img
+								class="images-reseaux" src="images/facebook.png" alt="logo facebook"></a></li>
+					<li class="header-li"><a href="panier.php"><i class="bi bi-cart3 header-panier"></i></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main role="main">
+		{% block main %}
+
+		{% endblock %}
+	</main>
+
+	<footer role="contentinfo">
+		<div class="footer-container">
+			<div class="footer-apropos">
+				<h4>A PROPOS</h4>
+				<p>
+					Lorem Elsass ipsum kartof salad hopla Richard Schireck amet DNA, blottkopf, sit
+					suspendisse picon bière habitant schnaps sit Chulia Roberstau varius eleifend Gal !
+					hop so Yo dû.
+				</p>
+			</div>
+			<div class="nos-partenaires">
+				<h4>NOS PARTENAIRES</h4>
+				<a href="https://www.razer.com/">Razer</a>
+				<a href="https://www.logitech.com/fr-fr">Logitech</a>
+				<a href="https://fr.steelseries.com/">Steelseries</a>
+				<a href="https://www.corsair.com/fr/fr/">Corsair</a>
+			</div>
+			<div class="nos-partenaires">
+				<h4>PLAN</h4>
+				<a href="index.php">Accueil</a>
+				<a href="nos_casques.php?aff=liste">Nos casques</a>
+				<a href="panier.php">Panier</a>
+				<a href="contact.php">Contact</a>
+			</div>
+			<div class="nos-reseaux">
+				<h4>NOS RESEAUX</h4>
+				<div class="reseaux-container">
+					<a href="https://twitter.com/home" target="_blank"><img src="images/twitter.png" alt="logo twitter"></a>
+					<a href="https://fr-fr.facebook.com/" target="_blank"><img src="images/facebook.png" alt="logo facebook"></a>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>Copyright © 2020. Sébastien Gross. All rights reserved.</p>
+		</div>
+	</footer>
+</body>
+
+</html>

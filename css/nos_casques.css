@@ -1,0 +1,298 @@
+/* ========== Haut de page ========== */
+
+.top-page-container{
+    background-image: url("../images/nos_casques_image01.jpg");
+}
+
+/* ========== Meilleurs Ventes ========== */
+
+h2{
+    font-family: 'Langar', cursive;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.best-seller-img{ /* Médaille à coté du h2*/
+    width: 30px;
+    height: 30px;
+}
+
+.meilleurs-ventes-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    text-align: center;	
+	width: 200px;
+    height: 235px;
+	border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	text-align: center;
+    transform: all 1.5s;
+}
+
+.meilleurs-ventes-container:hover{
+    transform: scale(1.2);
+}
+
+.meilleurs-ventes-images{
+    width: 100px;
+    height: 100px;
+}
+
+.nom-casque{ /* Nom du casque */
+    font-family: 'Inter', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 195px;
+}
+
+.prix-infos-container{ /* Conteneur du prix et du picto  */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.prix{
+    font-family: 'Inter', cursive;
+    font-size: 19px;
+    font-weight: 200;
+}
+
+.plus-picto{
+    display: inline-block;
+    background-color: #A3E08D;
+    color: white;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 3px;
+    transition: all .5s;
+}
+
+.plus-picto:hover{
+    background-color: #7B61FF;
+    cursor: pointer;
+}
+
+/* ========== Nombres de résultats et affichage grille / liste ========== */
+
+.affichage-resultat-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    gap: 55px;
+    font-size: 35px;
+}
+
+.affichages{ /* Conteneur des choix d'affichages */
+    display: flex;
+    gap: 25px;
+}
+
+.affichages-liste, .affichages-grille{ /* Mise en forme des deux bouttons pour changer l'affichage */
+    color: #7B61FF;
+    border: 2px solid #7B61FF;
+    padding: 10px;
+    border-radius: 15px;
+    transition: all 1s ease;
+}
+
+.affichages-liste:hover, .affichages-grille:hover{ /* Au survol, mettre une couleur plus sombre */
+    background-color: #6041ff;
+    color: white;
+}
+
+/* ========== Section : Filtres ========== */
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 193px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.filtres-title{ /* Conteneur du nom principale plus de son logo*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.tag-container{ 
+    margin-bottom: 3px;
+}
+
+.filtre-unique-container{ /* Pour avoir un espace entre les filtres */
+    margin: 10px 0px;
+}
+
+h3{ /* Nom principale des filtres */
+    margin: 0;
+    font-size: 25px;
+}
+
+.filtre-logo{ /* Logo pricipale des filtres */
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+label{
+    margin-right: 8px;
+    font-size: 18px;
+    font-family: 'Inter', cursive;
+    color: rgb(147, 147, 147);
+    
+}
+
+input[type="radio"]{ /* Pour créer un espacement avec le bord */
+    margin-right: 5px;
+}
+
+h5{ /* Titre des filtres */
+    background-color: #7B61FF;
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    padding: 4px;
+}
+
+select[name="trierpar"]{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border-right: none;
+    border-left: none;
+}
+
+.valider-filtres{
+    background-color: #7B61FF;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 25px;
+    width: 150px;
+    margin-left: 20px;
+    transition: all .5s;
+}
+
+.valider-filtres:hover{ /* Cursor pointeur, pour changer l'état du curseur (sinon : basique) */
+    background-color: #A3E08D;
+    cursor: pointer;
+}
+
+/* ==== Affichage en liste / grille ==== */
+
+.liste-produits{ /* Espace entre les filtres et la liste de produits */
+    margin-left: 20px;
+}
+
+.liste-produits-infos{ /* Permet de faire un retour à la ligne pour la liste si trop grand*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Affichage en grille */
+
+.grille{ /* Déclaration du conteneur principale du mode d'affichage grille */
+    display: flex;
+	justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;	
+	width: 346px;
+    height: 480px;
+	border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid black;
+    margin: 0 20px 20px 0;
+}
+
+.grille-img{ /* Taille des images */
+    width: 242px;
+    height: 242px;
+}
+
+.grille-nom-casque-container{
+    margin-left: 10px;
+}
+
+.grille-nom-casque, .liste-nom-casque{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.grille-nom-soustitre-container{
+    height: 99px;
+}
+
+.grille-soustitre, .liste-soustitre{
+    font-size: 20px;
+    margin: 10px 5px 0px 5px;
+    font-weight: 500;
+    color: rgb(179, 179, 179);
+    text-align: justify;
+}
+
+.grille-prinxinfos-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+    width: 100%;
+}
+
+.grille-prix{
+    font-family: 'Inter', cursive;
+    font-size: 22px;
+}
+
+/* Affichage en liste */
+
+.liste{ /* Déclaration du conteneur principale du mode d'affichage liste */
+    display: flex;
+	justify-content: left;	
+    align-items: center;
+	width: 100%;
+	border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid black;
+    margin: 0 20px 20px 0;
+    padding: 5px;
+}
+
+.liste-img{ /* Taille des images */
+    width: 200px;
+    height: 200px;
+}
+
+.liste-nom-soustitre-container{
+    margin-top: -12px;
+}
+
+.liste-nom-casque{
+    margin-left: 5px;
+}
+
+.liste-soustitre-container{
+    width: 642px;
+}
+
+.liste-prinxinfos-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+    width: 203px;
+}
+
+.liste-prix{
+    font-family: 'Inter', cursive;
+    font-size: 18px;
+}
+
+

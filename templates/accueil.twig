@@ -1,0 +1,70 @@
+{% extends 'base.twig' %}
+
+{% block style %}
+<link rel="stylesheet" href="css/accueil.css">
+{% endblock style %}
+
+{% block main %}
+
+<div class="top-page-container">
+	<h1 class="top-page-text">Bienvenue sur KASK !</h1>
+</div>
+
+<section class="section-informations">
+	<div class="wrapper">
+
+		<article>
+			<div class="title-container flex align-center">
+				<h2>Qui sommes-nous ?</h2>
+				<img src="images/papier.svg" alt="">
+			</div>
+			<div class="flex justify-between align-center">
+				<p class="description">
+					Lorem Elsass ipsum kartof salad hopla Richard Schireck amet DNA, blottkopf, sit
+					suspendisse picon bière habitant schnaps sit Chulia Roberstau varius eleifend Gal !
+					hop so Yo dû. Spätzle wie ftomi! rossbolla le Pellentesque elit consectetur vulputate
+					purus ch'ai jetz gehts los placerat sit mamsell ac non condimentum Morbi nullam turpis,
+					flammekueche lacus tristique rhoncus Salut bisamme ante Huguette hopla in, salu porta
+					leverwurscht Salu bissame morbi Chulien Heineken dui Strasbourg Mauris munster commodo
+					elementum messti de Bischheim geht's Racing. Hans rucksack Gal. kuglopf vielmols, sed
+					et sagittis aliquam non gewurztraminer libero. Habitant schnaps sit Chulia Roberstau varius
+					eleifend !
+				</p>
+				<img class="section-images" src="images/accueil_image01.jpg" alt="image casque">
+			</div>
+		</article>
+
+		<article>
+			<div class="title-container justify-end">
+				<img src="images/tools.svg" alt="">
+				<h2>Que faisons-nous ?</h2>
+			</div>
+			<div class="flex justify-between align-center">
+				<img class="section-images" src="images/accueil_image02.jpg" alt="image casque">
+				<p class="description">
+					Lorem Elsass ipsum kartof salad hopla Richard Schireck amet DNA, blottkopf, sit
+					suspendisse picon bière habitant schnaps sit Chulia Roberstau varius eleifend Gal !
+					hop so Yo dû. Spätzle wie ftomi! rossbolla le Pellentesque elit consectetur vulputate
+					purus ch'ai jetz gehts los placerat sit mamsell ac non condimentum Morbi nullam turpis,
+					flammekueche lacus tristique rhoncus Salut bisamme ante Huguette hopla in, salu porta
+					leverwurscht Salu bissame morbi Chulien Heineken dui Strasbourg Mauris munster commodo
+					elementum messti de Bischheim geht's Racing. Hans rucksack Gal. kuglopf vielmols, sed
+					et sagittis aliquam non gewurztraminer libero. Habitant schnaps sit Chulia Roberstau varius
+					eleifend !
+				</p>
+			</div>
+		</article>
+	</div>
+
+	<article class="incitation-container">
+		<div class="wrapper">
+			<div class="flex justify-center align-center direction-column text-center">
+				<h3>N’hésitez pas à découvrir nos produits ! En cliquant juste ici</h3>
+				<a class="accueil-bouton" href="nos_casques.php?aff=liste" title="Plus d'infos"><span>Cliquez moi !</span></a>
+			</div>
+		</div>
+	</article>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,176 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap'); /* Langar Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); /* Inter Font */
+
+/* ========== Déclarations générales ========== */
+
+body {
+	padding: 0;
+	margin: 0 auto;
+	background-color: #dbdbdb;
+	width: 1440px;
+}
+
+main{
+	background-color: white;
+}
+
+.wrapper{
+	width: 1320px;
+	margin: 0 auto;
+    height: 100%;
+}
+
+a, ul, li{
+	text-decoration: none;
+	list-style-type: none;
+	color: black;	
+}
+
+.top-page-container{ /* Conteneur de l'image pour chaque page */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 510px;
+}
+
+.top-page-text{ /* Style du texte dans le conteneur pour chaque page */
+	font-family: 'Langar', cursive;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    width: 725px;
+}
+
+/* ========== Header ========== */
+
+.header-title{ /* Titre du site */
+	color: #7B61FF;
+	font-family: 'Langar', cursive;
+	font-size: 75px;
+    margin-right: 100px;
+}
+
+header{
+    background-color: white;
+    padding: 0 60px;
+    border-bottom: 1px solid black;
+}
+
+.header-nav{ /* Pour tout mettre en ligne */
+    display: flex;
+}
+
+.header-ul{
+	display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    width: 100%;
+    color: black;
+}
+
+.header-li{
+    font-family: 'Inter', cursive;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.header-li a:hover{
+    color: #7B61FF;
+    font-weight: bolder;
+}
+
+.images-reseaux{ /* Taille des logos (Réseaux) */
+	width: 46px;
+	height: 46px;
+    transform: all 1.5s;
+}
+
+.images-reseaux:hover{
+    transform: scale(1.1);
+}
+
+.header-panier{
+	color: #63A6F4;
+	font-size: 40px;
+}
+
+.header-panier:hover{ /* Au survol du panier, changer la couleur */
+    color: #1c5da8;
+}
+    
+/* ========== Footer ========== */
+
+footer{
+	border-top: 1px solid black;
+    font-family: 'Inter', cursive;
+    background-color: white;
+}
+
+.footer-container{
+	padding: 0 60px;
+    justify-content: space-between;
+    display: flex;
+	margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h4{
+    font-weight: bold;
+	font-size: 20px;
+	margin: 0 0 14px 0;
+}
+
+.footer-container > div > a{ /* Tout les liens cliquable */
+	font-size: 18px;
+}
+
+.footer-container > div > a:hover{
+    color: #7B61FF;
+}
+
+.footer-container > div > p{
+    font-size: 18px;
+    width: 474px;
+    text-align: justify;
+}
+
+.nos-partenaires{
+    display: flex;
+    flex-direction: column;
+}
+
+.reseaux-container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.reseaux-container > a > img{
+	height: 36px;
+	width: 36px;
+    transform: all 1.2s;
+}
+
+.reseaux-container > a > img:hover{ /* Au survol de la souris, augmenter la taille */
+    transform: scale(1.2);
+}
+
+/* Copyright */
+
+.copyright{ 
+    border-top: 1px solid #BDB7B7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright > p{
+  color: #8E9398; 
+}
+
+
+

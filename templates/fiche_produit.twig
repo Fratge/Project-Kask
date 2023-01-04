@@ -1,0 +1,96 @@
+{% extends 'base.twig' %}
+
+{% block style %}
+<link rel="stylesheet" href="css/fiche_produit.css">
+{% endblock %}
+
+{% block main %}
+
+<div class="wrapper">
+
+    {% for element in elements %}
+    <div class="fiche-produit-container">
+        <div class="premieres-informations bordure">
+            <div>
+                <p class="nom-marque">{{element.nom_marque}}</p>
+                <p class="sous-titre">{{element.soustitre_casque}}</p>
+            </div>
+            <img class="logo-marque" src="./images/{{element.image_marque}}" alt="logo de la marque">
+        </div>
+
+        <div class="deuxieme-informations bordure">
+            <div>
+                <img src="./images/{{element.image_casque}}" alt="image du casque">
+            </div>
+            <div class="description-casque">
+                <p class="description-casque">{{element.description_casque}}</p>
+                <p class="description-prix">{{element.prix_casque}} €</p>
+                <div class="dispo-web-container">
+                    <p>Disponible en ligne :</p>
+                    {% if element.stockweb_casque == 1 %}
+                    <p class="en-stock">EN STOCK</p>
+                    {% else %}
+                    <p class="stock-vide">STOCK VIDE</p>
+                    {% endif %}
+                </div>
+                <form action="panier.php">
+                    <input type="hidden" onclick="{{fonction}}">
+                    <input class="ajouter-au-panier" value="Ajouter au panier" title="Ajouter au panier" type="submit">
+                </form>
+                <div class="flex justify-end">
+                    <a href="nos_casques.php?aff=liste"><img class="fleche-retour"
+                            src="./images/fleche-noire-gauche.png" alt="retour en arrière"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="troisieme-informations bordure">
+            <table role="presentation">
+                <thead>
+                    <tr>
+                        <th class="bordure-droite" >Caractéristiques techniques :</th><th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="bordure-droite bordure-bas colonne1">Réduction du bruit active</td>
+                        {% if element.reductionbruit_casque == 1 %}
+                        <td class="bordure-bas colonne2">OUI</td>
+                        {% else %}
+                        <td class="bordure-bas colonne2">NON</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        <td class="bordure-droite bordure-bas colonne1">Contrôle du volume</td>
+                        {% if element.controlevolume_casque == 1 %}
+                        <td class="bordure-bas colonne2">OUI</td>
+                        {% else %}
+                        <td class="bordure-bas colonne2">NON</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        <td class="bordure-droite bordure-bas colonne1">Sans-fil</td>
+                        {% if element.sansfil_casque == 1 %}
+                        <td class="bordure-bas colonne2">OUI</td>
+                        {% else %}
+                        <td class="bordure-bas colonne2">NON</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        <td class="bordure-droite colonne1 flex align-center justify-around">Connectique :
+                            {{element.nom_connectique}}<img class="image-connectique"
+                                src="./images/{{element.image_connectique}}" alt="image du connectique"></td>
+                        <td><span class="avantage-inconvenient">Avantage : </span>{{element.avantage_connectique}} <span
+                                class="avantage-inconvenient"> Inconvenient :
+                            </span>{{element.inconvenient_connectique}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends 'base.twig' %}
+
+{% block style %}
+<link rel="stylesheet" href="css/nos_casques.css">
+{% endblock %}
+
+{% block main %}
+
+<div class="top-page-container">
+    <h1 class="top-page-text">Découvrez tout les casques que nous proposons !</h1>
+</div>
+
+<div class="wrapper">
+
+    <section class="meilleurs-ventes">
+        <h2>Meilleurs ventes <img class="best-seller-img" src="./images/best_seller.png" alt=""></h2>
+
+        <div class="flex direction-row justify-between">
+            {% for element in meilleurs_vente %}
+            <div class="meilleurs-ventes-container">
+                <a href="fiche_produit.php?id={{element.id_casque}}"><img class="meilleurs-ventes-images"
+                        src="./images/{{element.image_casque}}" alt="image casque meilleur vente"></a>
+                <p class="nom-casque">{{element.nom_casque}}</p>
+                <div class="prix-infos-container">
+                    <p class="prix">{{element.prix_casque}} €</p>
+                    <a href="fiche_produit.php?id={{element.id_casque}}" title="En savoir plus"><i
+                            class="bi bi-plus-lg plus-picto"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+
+    <div class="affichage-resultat-container">
+        <p>{{comptage}} Résultats</p>
+        <div class="affichages">
+            <a href="nos_casques.php?aff=grille"><i class="affichages-grille bi bi-grid"></i></a>
+            <a href="nos_casques.php?aff=liste"><i class="affichages-liste bi bi-card-list"></i></a>
+        </div>
+    </div>
+
+    <div class="flex">
+        <section class="filtres">
+            <form method="POST" action="nos_casques.php?aff={{aff}}">
+                <div class="filtres-title">
+                    <img class="filtre-logo" src="./images/filtres.png" alt="">
+                    <h3>Filtres</h3>
+                </div>
+                <div class="tag-container">
+                    <h5>Tags</h5>
+                    {% for tag in tags %}
+                    <input type="checkbox" name="tag[]" value="{{tag.id_tag}}">
+                    <label for="tag">{{tag.nom_tag}}</label>
+                    {% endfor %}
+                </div>
+
+                <div class="filtre-unique-container">
+                    <h5>Marques</h5>
+                    <div class="flex direction-column">
+                        {% for marque in marques %}
+                        <div>
+                            <input type="radio" name="marque" value="{{marque.id_marque}}">
+                            <label for="marque">{{marque.nom_marque}}</label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filtre-unique-container">
+                    <h5>Utilisations</h5>
+                    <div class="flex direction-column">
+                        {% for utilisation in utilisations %}
+                        <div>
+                            <input type="radio" name="utilisation" value="{{utilisation.id_utilisation}}">
+                            <label for="utilisation">{{utilisation.nom_utilisation}}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="filtre-unique-container">
+                    <h5>Prix</h5>
+                    <div class="flex direction-column">
+                        {% for prixfourchette in prixfourchettes %}
+                        <div>
+                            <input type="radio" name="prixfourchette" value="{{prixfourchette.id_prixfourchette}}">
+                            <label for="prixfourchette">{{prixfourchette.nom_prixfourchette}}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="filtre-unique-container">
+                    <h5>Connectiques</h5>
+                    <div class="flex direction-column">
+                        {% for connectique in connectiques %}
+                        <div>
+                            <input type="radio" name="connectique" value="{{connectique.id_connectique}}">
+                            <label for="connectique">{{connectique.nom_connectique}}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="filtre-unique-container">
+                    <h5>Trier par</h5>
+                    <select name="trierpar">
+                        <option name="trierpar" value="casque.nom_casque">Nom A - Z</option>
+                        <option name="trierpar" value="casque.nom_casque DESC">Nom Z - A</option>
+                        <option name="trierpar" value="casque.prix_casque">Prix croissant</option>
+                        <option name="trierpar" value="casque.prix_casque DESC">Prix décroissant</option>
+                    </select>
+                </div>
+
+                <input class="valider-filtres" value="Valider" type="submit">
+            </form>
+        </section>
+
+        <section class="liste-produits">
+            <div class="liste-produits-infos">
+                {% for produit in liste_produits %}
+                <div class="{{aff}}">
+                    <div class="image-container">
+                        <a href="fiche_produit.php?id={{produit.id_casque}}"><img class="{{aff}}-img"
+                                src="./images/{{produit.image_casque}}" alt="image casque"></a>
+                    </div>
+                    <div class="{{aff}}-nom-soustitre-container">
+                        <div class="{{aff}}-nom-casque-container">
+                            <a class="{{aff}}-nom-casque"
+                                href="fiche_produit.php?id={{produit.id_casque}}">{{produit.nom_casque}}</a>
+                        </div>
+                        <div class="{{aff}}-soustitre-container">
+                            <p class="{{aff}}-soustitre">{{produit.soustitre_casque}}</p>
+                        </div>
+                    </div>
+                    <div class="{{aff}}-prinxinfos-container">
+                        <p class="{{aff}}-prix">{{produit.prix_casque}} €</p>
+                        <a class="{{aff}}-ensavoirplus" href="fiche_produit.php?id={{produit.id_casque}}"
+                            title="En savoir plus"><span>En savoir plus</span></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+
+</div>
+
+{% endblock %}

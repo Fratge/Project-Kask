@@ -1,0 +1,133 @@
+/* ========== Boutton accueil animation ========== */
+
+.accueil-bouton{
+    border-radius: 25px;
+    border: solid black 1px;
+    background-color: white;
+    padding: 0 80px;
+    font-size: 23px;
+    font-family: 'Inter', cursive;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+
+.accueil-bouton > span{ /* Position relative afin d'utiliser top ect... */
+    position: relative;
+    z-index: 2;
+}
+
+.accueil-bouton::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(181, 255, 181);
+    border-radius: 25px;
+    transition: all .35s;
+}
+
+.accueil-bouton:hover{
+    color: #ff0000;    
+}
+
+.accueil-bouton:hover:after{ /* Au survol prendre toute la largeur */
+    width: 100%;
+}
+
+/* ========== Boutton : En savoir plus (Page Nos casques) ========== */
+
+.grille-ensavoirplus, .liste-ensavoirplus{ /* Deux classes pour les deux modes d'affichages */
+    background-color: #A3E08D;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-family: 'Inter', cursive;
+    font-size: 15px;
+    position: relative;
+    color: white;
+    z-index: 0;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grille-ensavoirplus::before, .liste-ensavoirplus::before{
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #7B61FF;
+    border-radius: 50% 50% 0% 0%;
+    z-index: -1;
+    transition: all .5s;
+}
+
+.grille-ensavoirplus:hover::before, .liste-ensavoirplus:hover::before{
+    top: 0px;
+    border-radius: 0;
+}
+
+/* ========== Boutton : Ajouter au panier (Page Fiche produit) ========== */
+
+.ajouter-au-panier{
+    color: white;
+    background-color: #A3E08D;
+    font-size: 24px;
+    width: 500px;
+    padding: 10px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: ease-out 0.4s;
+}
+
+.ajouter-au-panier:hover { /* Au survol donner ce border-shadow */
+    box-shadow: inset 0 0 0 50px #46b71d;
+    color: #363636;
+}
+
+/* ========== Bouttons : Continuer mes achats / Valider ma commande (Page Panier) ========== */
+
+.bouttons-achat{
+    margin-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.continuer-achat, .valider-commande{ /* Mise en forme des deux container des bouttons */
+    padding: 25px;
+    width: 600px;
+    text-align: center;
+    font-family: 'Inter', cursive;
+    font-size: 30px;
+    cursor: pointer;
+    transition: ease-out 0.4s;
+}
+
+/* ==== Boutton continuer ==== */
+
+.continuer-achat{
+    background-color: rgb(181, 255, 181);
+}
+
+.continuer-achat:hover{ /* Au survol donner ce border-shadow */
+    box-shadow: inset 0 100px 0 0 rgb(55, 206, 55);
+}
+
+/* ==== Boutton Valider ==== */
+
+.valider-commande{
+    background-color: rgb(255, 139, 139);
+    margin-left: 20px;
+}
+
+.valider-commande:hover{ /* Au survol donner ce border-shadow */
+    box-shadow: inset 0 100px 0 0 rgb(244, 89, 89);
+}

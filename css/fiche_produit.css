@@ -1,0 +1,162 @@
+.fiche-produit-container{ /* Conteneur globale */
+	margin: auto;
+    font-family: 'Inter', cursive;
+    padding: 45px 0;
+}
+
+.bordure{ /* Bordure pour chaque parties */
+	border: 4px solid #7B61FF;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border-radius: 25px;
+}
+
+/* ========== Premières informations (marque, sous-titre, image marque) ========== */
+
+.premieres-informations{
+    display: flex;
+	justify-content: space-between;
+    border-radius: 25px;
+    padding: 10px;
+    height: 107px;
+}
+
+.premieres-informations > div{ /* Espacement des informations, du bord */
+    margin-left: 50px;
+    width: 1070px;
+}
+
+.nom-marque{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.sous-titre{
+    font-size: 20px;
+    color: #8E8E8E;
+    font-weight: 600;
+    margin-top: -8px;
+}
+
+.logo-marque{
+	width: 100px;
+	height: 100px;
+}
+
+/* ========== Deuxième informations ========== */
+
+.deuxieme-informations{
+	display: flex;
+	flex-direction: row;
+    margin: 20px 0;
+    font-family: 'Inter', cursive;
+}
+
+.deuxieme-informations > div > img{ /* Image du casque */
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+
+.description-casque{
+    text-align: justify;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.description-prix{
+    font-weight: bolder;
+    font-size: 27px;
+}
+
+.dispo-web-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #e9e9e9;
+    padding: 10px;
+}
+
+.dispo-web-container > p{
+    margin: 0;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.en-stock{
+    color: #A3E08D;
+}
+
+.stock-vide{
+    color: red;
+}
+
+.fleche-retour{
+    width: 65px;
+    height: 65px;
+    margin-top: 33px;
+    margin-bottom: 20px;
+    transition: all .1s;
+}
+
+.fleche-retour:hover{ /* Au survol de la flèche sa taille augmente */
+    transform: scale(1.5);
+}
+
+/* ========== Troisième informations ========== */
+
+.troisieme-informations{ /* Ce qui dépasse est caché */
+    overflow: hidden;
+}
+
+table{
+    border-collapse: collapse;
+    font-size: 18px;
+    font-family: 'Inter', cursive;
+}
+
+thead{
+    border-bottom: 3px solid black;   
+    padding: 5px;
+}
+
+th{
+    padding: 15px;
+    text-align: center;
+    background-color: #CCC;
+}
+
+tr:nth-child(even){ /* Une ligne sur deux possède la couleur */
+    background: #CCC
+}
+
+td{
+    padding: 15px;
+}
+
+.colonne1{
+    width: 400px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.colonne2{
+    font-weight: bold;
+}
+
+.bordure-droite{
+    border-right: 3px solid black;    
+}
+
+.bordure-bas{
+    border-bottom: 3px solid black;   
+}
+
+.image-connectique{
+    height: 100px;
+    width: 100px;
+}
+
+.avantage-inconvenient{
+    font-weight: bold;
+}

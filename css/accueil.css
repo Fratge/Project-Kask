@@ -1,0 +1,72 @@
+/* ========== Haut de page ========== */
+
+.top-page-container{ /* Image du conteneur */
+    background-image: url("../images/accueil_fond.jpg");
+}
+
+/* ========== Section Informations ========== */
+
+
+.section-informations{
+    background-color: white;
+}
+
+.title-container{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+h2{
+    font-family: 'Langar', cursive;
+    font-size: 35px;
+    font-weight: 300;
+    margin: 0;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+h2::before{ /* Trait violet en-dessous des h2 */
+    position: absolute;
+    content:"";
+    background-color: #7B61FF;
+    width: 130px;
+    height: 7px;
+    bottom: 0;
+    border-radius: 30px;
+}
+
+.title-container img{ /* Picto à coté des titres */
+    margin: 0 17px;
+    height: 40px;
+    width: 40px;
+}
+
+.description{
+    font-size: 20px;
+    font-family: 'Inter', cursive;
+    text-align: justify;
+    width: 575px;
+}
+
+.section-images{
+    width: 580px;
+    height: 356px;
+}
+
+
+/* ==== Article : incitation ==== */
+
+.incitation-container{
+    background-color: #7B61FF;
+    margin-top: 70px;
+    height: 250px;
+    color: white;
+}
+
+h3{
+    font-family: 'Langar', cursive;
+    font-weight: normal;
+    font-size: 35px;
+    width: 650px;
+}

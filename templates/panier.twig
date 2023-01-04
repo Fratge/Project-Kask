@@ -1,0 +1,71 @@
+{% extends 'base.twig' %}
+
+{% block style %}
+<link rel="stylesheet" href="css/panier.css">
+{% endblock %}
+
+
+{% block main %}
+
+<div class="top-page-container">
+    <h1 class="top-page-text">Finalisez vos achats ci-dessous !</h1>
+</div>
+
+<div class="wrapper">
+    
+    <h2>Mon panier</h2>
+    <table role="presentation">
+        <thead>
+            <tr>
+                <th>PRODUIT(S)</th>
+                <th>PRIX UNITAIRE</th>
+                <th>SUPPRIMER</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for element in panier %}
+            <tr>
+                <td class="td-infos-casque flex align-center justify-between">
+                    <img src="./images/{{element.image_casque}}" alt="image des casque dans le panier">
+                    <div class="nom-casque-container">
+                        <p class="nom-casque">{{element.nom_casque}}</p>
+                    </div>
+                </td>
+                <td class="td-prix">
+                    <p>{{element.prix_casque}} €</p>
+                </td>
+                <td class="td-supprimer">
+                    <form action="panier.php">
+                        <input type="hidden" name="id_delete" value="{{element.id_casque}}" onclick="{{supprimer_panier}}">
+                        <input class="boutton-supprimer" value="Supprimer" type="submit">
+                    </form>
+                </td>
+                <td class="td-prix-total">
+                    <p>{{element.prix_casque}} €</p>
+                </td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td class="td-text-total text-left" colspan="3">
+                    <p>TOTAL</p>
+                </td>
+                <td>
+                    <p class="prix-total">{{prix_total}} €</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="bouttons-achat flex">
+        <div class="continuer-achat">
+            <a href="nos_casques.php?aff=liste" title="Continuer les achats">Continuer mes achats</a>
+        </div>
+        <div class="valider-commande">
+            <a href="commande.php" title="Valider la commande">Valider ma commande</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

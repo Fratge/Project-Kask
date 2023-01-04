@@ -1,0 +1,92 @@
+{% extends "base.twig" %}
+
+{% block style %}
+<link rel="stylesheet" href="css/contact.css">
+{% endblock style %}
+
+{% block main %}
+
+<div class="top-page-container">
+    <h1 class="top-page-text">Contactez nous grâce aux informations ci-dessous !</h1>
+</div>
+
+<div class="wrapper">
+
+    <div class="infos-loc-container">
+        <div class="informations">
+            <h2>Informations</h2>
+            <div class="text-container">
+                <i class="bi bi-geo-alt-fill infos-picto"></i>
+                <p>9 Rue des poitiers, Haguenau 67500</p>
+            </div>
+            <div class="text-container">
+                <i class="bi bi-envelope-fill infos-picto"></i>
+                <p>voicimonemail@gmail.com</p>
+            </div>
+            <div class="text-container">
+                <i class="bi bi-telephone-fill infos-picto"></i>
+                <p> 06 10 32 32 45</p>
+            </div>
+        </div>
+        <div class="localisation">
+            <h2>Localisation</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.7988512584528!2d7.7860129292274!3d48.81633299870521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796ead79d037723%3A0xb460401cd043be5f!2sIUT%20de%20Haguenau!5e0!3m2!1sfr!2sfr!4v1652950810929!5m2!1sfr!2sfr"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div class="horraires text-center">
+        <h2>Horraires</h2>
+        <div class="text-horraires-container">
+            <div>
+                <p>Lundi : <span>9h00 - 12h00 / 13h30 - 18h 00</span></p>
+                <p>Mardi : <span>9h00 - 12h00 / 13h30 - 18h 00</span></p>
+            </div>
+            <div>
+                <p>Mercredi : <span>9h00 - 12h00 / 13h30 - 18h 00</span></p>
+                <p>Jeudi : <span>9h00 - 12h00 / 13h30 - 18h 00</span></p>
+            </div>
+        </div>
+        <p class="vendredi">Vendredi : <span>13h30 - 18h 00</span></p>
+    </div>
+
+    <div class="form-container">
+
+        <form action="validation_message.php" method=POST>
+            <h2 class="h2-form">Formulaire de contact</h2>
+
+            <fieldset>
+                <legend>Vos informations :</legend>
+                <p class="align">
+                    <label for="nom"> Votre nom :</label>
+                    <input name="nom_user" id="nom" type="texte" size="30" maxlength="100" required>
+                </p>
+                <p class="align">
+                    <label for="prenom"> Votre prénom :</label>
+                    <input name="prenom_user" id="prenom" type="text" size="30" maxlength="100" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend> Message : </legend>
+                <p>
+                    <textarea name="message_user" cols="50" rows="10"
+                        placeholder="Vous pouvez insérer votre message ici..." required></textarea>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Valider</legend>
+                <p class="centre">
+                    <input name="soumettre" type="submit" value="Envoyer" title="Valider">
+                </p>
+            </fieldset>
+
+        </form>
+    </div>
+    
+</div>
+
+{% endblock %}

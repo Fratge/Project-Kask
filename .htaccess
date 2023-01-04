@@ -1,0 +1,3 @@
+IndexIgnore *
+ErrorDocument 404 /SAE_203/error404.php
+ErrorDocument 403 /SAE_203/error403.php
